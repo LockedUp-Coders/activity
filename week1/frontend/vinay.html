@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Enter details</h3>
+      
+      <form id="myform" style="width: 80%" action="">
+        
+        <div class="form-group">
+          <label for="nm">Username:</label>
+          <input autocomplete="off" type="nm" class="form-control" id="nm" placeholder="Enter username" name="nm">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input autocomplete="off" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        
+        <button type="button" class="btn btn-default" onclick="myFunction()">Submit</button>
+        <script>
+      function myFunction() {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var x = document.getElementById("myform");
+        cell1.innerHTML = x["nm"].value;
+        cell2.innerHTML = x["email"].value;
+        x["nm"].value = "";
+        x["email"].value = "";
+      }
+    </script>
+        
+      </form>
+
+    </div>
+    <div class="col-sm-6">
+      <h3>Participants</h3>
+      <table id="myTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Mary Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
