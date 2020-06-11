@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+  <script>
+      function submitinfo() {
+        var table = document.getElementById("loginInfo");
+        var row = table.insertRow(-1);
+        var col1 = row.insertCell(0);
+        var col2 = row.insertCell(1);
+
+        col1.innerHTML = document.getElementById("name").value;
+        col2.innerHTML = document.getElementById("mail_id").value;
+
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form">
+                    <h3>Login for Form </h3>
+                    <form >
+                        <div class="form-group"   >
+                            <input type="text" id="name" class="form-control" placeholder="Your Name *"  />
+                        </div>
+                        <div class="form-group" >
+                            <input type="Email" id="mail_id" class="form-control" placeholder="Your Email *"  />
+                        </div>
+                        <div class="form-group" >
+                            <input type="submit"  onclick="submitinfo()" class="btnSubmit" value="Submit"  />
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-md-6 login-details">
+                 <h3 >Login Details of Existing users </h3>
+
+          <table id="loginInfo" class="table ">
+                 <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Email Id</th>
+                 </tr>
+                </thead>
+
+               <tbody>
+                <tr>
+                  <td>Kanika</td>
+                  <td>kanika@gmail.com</td>
+               </tr>
+              </tbody>
+      </table>
+
+
+
+                </div>
+            </div>
+        </div>
+
+  </body>
+</html>
